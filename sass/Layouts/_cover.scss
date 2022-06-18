@@ -1,0 +1,50 @@
+.cover {
+    background-image: url(../img/index-banner-2.jpg);
+    @extend %backgroundImg;
+    height: 800px;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    .cover__title {
+        color: $color-white-0;
+        text-transform: uppercase;
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+
+        h1 {
+            letter-spacing: $ls-4;
+            font-size: $fs-9;
+            line-height: normal;
+            font-weight: $fw-1;
+        }
+
+        h3 {
+            letter-spacing: $ls-5;
+            font-size: $fs-6;
+        }
+    }
+}
+
+// RESPONSIVE
+@include responsive("medium") {
+    .cover {
+        height: 600px;
+        .cover__title {
+            top: 40%;
+            h1 {
+                font-size: $fs-10;
+                margin-bottom: 0;
+            }
+            h3 {
+                font-size: $fs-5;
+            }
+        }
+    }
+}

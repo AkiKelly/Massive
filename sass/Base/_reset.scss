@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: $color-black-0;
+    font-size: $fs-3;
+    font-weight: $fw-0;
+    line-height: $line-height-0;
+    
+}
+
+/* BÔI ĐEN KHỐI VĂN BẢN  */
+::selection{
+    background-color: $color-yellow-0;
+    color: $color-white-4;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0 0 $mg-3 0;
+    line-height: 1.5;  
+    
+}
+
+h1, h2{
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h3{
+    font-size: $fs-7;
+    letter-spacing: $ls-2;
+    text-transform: uppercase;
+}
+
+h4{
+    font-size: $fs-5;
+    letter-spacing: $ls-2;
+    text-transform: uppercase;
+}
+
+h5{
+    font-size: $fs-2;
+    letter-spacing: $ls-2;
+}
+
+p{
+    margin: 0 0 $mg-3;
+    color: $color-grey-2;
+    line-height: $line-height-3;
+}
+
+a{
+    text-decoration: none;
+    color: $color-black-1;
+    letter-spacing: 1px;
+}

@@ -1,0 +1,21 @@
+button{
+    @include styleButton($color-white-0,$color-black-1);
+
+    &:hover, &:focus {
+        background: $color-yellow-0;
+        outline: none;
+    }
+}
+
+.button--yellow{
+    @include styleButton($color-white-0,$color-yellow-0);
+    &:hover, &:focus{
+        @include styleButton($color-black-1, $color-white-0)
+    }
+}
+
+@include responsive("medium"){
+    button{
+        font-size: $fs-1 - 1;
+    }
+}

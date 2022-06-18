@@ -1,0 +1,97 @@
+.intro {
+    @extend .section;
+    .intro__title {
+        margin-bottom: $mg-6;
+        text-align: center;
+        h3 {
+            margin-bottom: $mg-2;
+            padding-bottom: $mg-0;
+            letter-spacing: $ls-2;
+            text-transform: uppercase;
+
+            &::after {
+                content: "";
+                position: relative;
+                left: 50%;
+                bottom: -12px;
+                width: 60px;
+                height: 2px;
+                margin-left: -31px;
+                background: #595959;
+                display: block;
+            }
+        }
+        p {
+            width: 60%;
+            margin: 0 auto;
+            color: $color-grey-2;
+            line-height: $line-height-2;
+        }
+    }
+
+    .intro__detail{
+        .intro__content{
+            padding-right: $pd-2;
+            padding-left: $pd-2;  
+        }
+        .intro__item{
+            position: relative;
+            padding: $pd-2;
+            border: 1px solid $color-grey-4;
+            border-radius: 4px;
+            i{
+                position: absolute;
+                top: -30px;
+                left: 30px;
+                width: 60px;
+                height: 60px;
+                text-align: center;
+                border-radius: 4px;
+                background: $color-black-1;
+                box-shadow: 0 0 0 10px $color-white-0;
+                line-height: $line-height-5;
+                @include styleText($color-white-0,$fs-10,$fw-0);
+                transition: 0.5s;
+                
+            }
+            &:hover i{
+                background-color: $color-yellow-0;
+            }
+            h4{
+                margin: $mg-2 0;
+                letter-spacing: $ls-1;
+                font-family: $fw-0;
+            }
+            p{
+                color: $color-grey-2;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+// RESPONSIVE
+@include responsive("large"){
+    .intro__detail{
+        .intro__item{
+            margin-bottom: $mg-4;
+        }
+    }
+}
+
+@include responsive("medium") {
+    .intro__title{
+        h3{
+            font-size: $fs-5;
+        }
+        p{
+            width: 80%;
+        }
+    }
+    .intro__detail{
+        .intro__item{
+            margin-bottom: $mg-4;
+        }
+    }
+}
+
+}

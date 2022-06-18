@@ -1,0 +1,32 @@
+.statics{
+    @extend .section;
+    background-color: $color-black-1;
+    .statics__item{
+        text-align: center;
+        color: $color-white-0;
+        .statics__num{
+            margin-bottom: $mg-0;
+            font-size: $fs-8;
+            i{
+                padding-right: $pd-0;
+            }
+        }
+        p{
+            letter-spacing: $ls-1;
+            text-transform: uppercase;
+            color: $color-white-0;
+            margin-bottom: 0;
+        }
+    }
+
+// RESPONSIVE
+@include responsive("large"){
+    .statics__item{
+        padding: $pd-1 0;
+        .statics__num{
+            margin-bottom: 5px;
+        }
+    }
+}
+
+}

@@ -1,0 +1,6 @@
+.logo{
+    @extend .section;
+    .item{
+        margin: $mg-2;
+    }
+}

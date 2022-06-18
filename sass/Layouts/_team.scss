@@ -1,0 +1,178 @@
+.team {
+    @extend .section;
+    padding-top: 0;
+    .team__title {
+        margin-bottom: $mg-6;
+        text-align: center;
+        h3 {
+            margin-bottom: $mg-2;
+            padding-bottom: $mg-0;
+            letter-spacing: $ls-2;
+            text-transform: uppercase;
+
+            &::after {
+                content: "";
+                position: relative;
+                left: 50%;
+                bottom: -12px;
+                width: 60px;
+                height: 2px;
+                margin-left: -31px;
+                background: $color-grey-6;
+                display: block;
+            }
+        }
+        p {
+            width: 60%;
+            margin: 0 auto;
+            color: $color-grey-2;
+            line-height: $line-height-2;
+        }
+    }
+    .col-4 {
+        padding-right: $pd-2;
+        padding-left: $pd-2;
+    }
+}
+
+.team__member {
+    overflow: hidden;
+    position: relative;
+
+    .team__img {
+        position: relative;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .team__intro {
+            position: absolute;
+            right: 0;
+            bottom: 30px;
+            width: 70%;
+            padding: $pd-0 20px;
+            text-align: right;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            h5,
+            span {
+                margin-bottom: 0;
+                letter-spacing: $ls-2;
+                text-transform: uppercase;
+            }
+            span {
+                color: rgba(255, 255, 255, 0.5);
+                font-size: $fs-1 - 1;
+            }
+        }
+    }
+}
+.team__hover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 20px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+
+    .hover__top {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        padding: 0 20px;
+        text-align: center;
+        transform: translateY(-55%);
+        opacity: 0;
+        transition: all 0.3s 0.2s;
+        h4 {
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .hover__icon {
+        position: absolute;
+        bottom: 0%;
+        width: 100%;
+        text-align: center;
+        transform: translateY(45%);
+        opacity: 0;
+        transition: all 0.3s 0.2s;
+        a {
+            margin: 0 10px;
+            font-size: 16px;
+        }
+        i:hover{
+            color: $color-yellow-0;
+        }
+    }
+}
+
+.team__member:hover .team__hover {
+    opacity: 1;
+}
+.team__member:hover .hover__top {
+    top: 35%;
+    opacity: 1;
+}
+
+.team__member:hover .hover__icon {
+    bottom: 10%;
+    opacity: 1;
+}
+
+.team__hiring {
+    margin: 100px 15px 0 15px;
+
+    padding: $pd-3;
+    background-color: #f5f5f5;
+    .hiring__left{
+        h4{
+            margin-bottom: 0;
+            letter-spacing: $ls-1;
+            span{
+                color: $color-yellow-0;
+            }
+        }
+        p{
+            margin-top: $mg-0;
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+    }
+}
+
+
+// RESPONSIVE
+.team{
+    @include responsive("large"){
+        .team__hiring{
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+
+    @include responsive("medium"){
+        .team__title{
+            h3{
+                font-size: $fs-5;
+            }
+            p{
+                width: 80%;
+            }
+        }
+        .team__hiring{
+            margin-right: 0;
+            margin-left: 0;
+            button{
+                margin-top: $mg-1;
+            }
+        }
+    }
+}

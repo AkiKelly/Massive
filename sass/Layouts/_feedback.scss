@@ -1,0 +1,55 @@
+.feedback{
+    @extend .section;
+    text-align: center;
+    border-bottom: .5px solid $color-grey-4;
+    .container{
+        width: 50%;
+        .item{
+            margin: $mg-2;    
+            .client-image{
+                width: 100px;
+                height: auto;
+                margin-bottom: $mg-2;
+                padding: 0;
+                img{
+                    width: 100px;
+                    border-radius: 50%;
+                    
+                }
+            } 
+            .feedback__cmt{
+                font-size: $fs-4;
+                font-style: italic;
+                
+            }
+            .client-info{
+                margin-top: $mg-0;
+                letter-spacing: $ls-2;
+                text-transform: uppercase;
+                color: $color-black-1;
+                font-size: $fs-2;
+                
+                span{
+                    display: block;
+                    color: #7f7f7f;
+                    font-size: $fs-1 - 1;
+                }
+            }      
+        }
+        
+    }
+    
+//   RESPONSIVE 
+//Ipad : max-width: 992px
+@include responsive("large"){
+    .container{
+        width: 100%;
+        
+    }
+    
+}      
+    
+    
+    
+    
+}
